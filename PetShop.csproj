@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91AFE754-0E78-4E71-9C0A-718EA4E520DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PetShop</RootNamespace>
+    <AssemblyName>PetShop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Iconka-Saint-Whiskers-Cat-food-hearts.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autentikasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autentikasi.Designer.cs">
+      <DependentUpon>Autentikasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRBiayaTambahan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRBiayaTambahan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRStockBarang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRStockBarang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crypto.cs" />
+    <Compile Include="FrmBiayaTambahan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBiayaTambahan.Designer.cs">
+      <DependentUpon>FrmBiayaTambahan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLaporan.designer.cs">
+      <DependentUpon>FrmLaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPenjualan.designer.cs">
+      <DependentUpon>FrmPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStock.designer.cs">
+      <DependentUpon>FrmStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="LapBiayaTambahan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LapBiayaTambahan.Designer.cs">
+      <DependentUpon>LapBiayaTambahan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LapStockBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LapStockBarang.Designer.cs">
+      <DependentUpon>LapStockBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAkun.Designer.cs">
+      <DependentUpon>FrmAkun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecretKeyLogger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecretKeyLogger.Designer.cs">
+      <DependentUpon>SecretKeyLogger.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Autentikasi.resx">
+      <DependentUpon>Autentikasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRBiayaTambahan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRBiayaTambahan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRStockBarang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRStockBarang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBiayaTambahan.resx">
+      <DependentUpon>FrmBiayaTambahan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLaporan.resx">
+      <DependentUpon>FrmLaporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPenjualan.resx">
+      <DependentUpon>FrmPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStock.resx">
+      <DependentUpon>FrmStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LapBiayaTambahan.resx">
+      <DependentUpon>LapBiayaTambahan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LapStockBarang.resx">
+      <DependentUpon>LapStockBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAkun.resx">
+      <DependentUpon>FrmAkun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecretKeyLogger.resx">
+      <DependentUpon>SecretKeyLogger.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\BebasNeueBold.ttf" />
+    <None Include="Resources\Help.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\budget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trade_blur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trade_blur2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_blur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_blur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_blur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\budget_blur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\petshop2.gif" />
+    <None Include="Resources\payment-method.png" />
+    <None Include="Resources\warehouse.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\transaction-history.png" />
+    <None Include="Resources\transaction.png" />
+    <None Include="Resources\stock.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\sales.png" />
+    <None Include="Resources\sales %282%29.png" />
+    <None Include="Resources\sales %281%29.png" />
+    <None Include="Resources\report1.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\power-off.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\petshop1.gif" />
+    <None Include="Resources\pet-shop.png" />
+    <None Include="Resources\petshop.gif" />
+    <None Include="Resources\more.png" />
+    <None Include="Resources\magnifier.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\back1.png" />
+    <Content Include="Iconka-Saint-Whiskers-Cat-food-hearts.ico" />
+    <None Include="Resources\barcode-scanner.png" />
+    <None Include="Resources\checkout1.png" />
+    <None Include="Resources\files1.png" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\home-address.png" />
+    <None Include="Resources\in.png" />
+    <None Include="Resources\charging-station.png" />
+    <None Include="Resources\bill.png" />
+    <None Include="Resources\cashless-payment.png" />
+    <None Include="Resources\interest.png" />
+    <Content Include="Resources\kittyAccount.png" />
+    <None Include="Resources\Splash.png" />
+    <None Include="Resources\kittyAccount1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
